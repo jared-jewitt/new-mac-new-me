@@ -1,0 +1,30 @@
+# This is Git's per-user configuration file.
+
+[user]
+  name = Jared Jewitt
+  email = jaredjewitt@gmail.com
+
+[core]
+  pager = cat
+
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = true
+
+[fetch]
+  prune = true
+
+[alias]
+  # Edit last commit message.
+  reword = commit --amend
+
+  # Undo last commit but keep changed files in stage.
+  undo = reset --soft HEAD~1
+
+  # Undo last commit without keeping changed files in stage.
+  forget = reset --hard HEAD~1
+
+  # Remove all file(s) from Git but not from disk.
+  nuke = rm -r --cached .
